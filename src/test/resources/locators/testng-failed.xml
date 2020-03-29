@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="3" guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
+  <listeners>
+    <listener class-name="com.qa.listeners.CustomTestNGReporter"/>
+  </listeners>
+  <test name="Test(failed)" parallel="tests">
+    <classes>
+      <class name="com.qa.demo.tests.GoogleTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="DefaultTest"/>
+        </methods>
+      </class> <!-- com.qa.demo.tests.GoogleTest -->
+      <class name="com.qa.demo.tests.FBTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="cleanLogFolder"/>
+          <include name="mergeLogs"/>
+        </methods>
+      </class> <!-- com.qa.demo.tests.FBTest -->
+      <class name="com.qa.demo.tests.YahooTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.qa.demo.tests.YahooTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+  <test name="Test3(failed)" parallel="tests">
+    <classes>
+      <class name="com.qa.demo.tests.GoogleTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.qa.demo.tests.GoogleTest -->
+      <class name="com.qa.demo.tests.FBTest">
+        <methods>
+          <include name="FBTest"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="cleanLogFolder"/>
+          <include name="mergeLogs"/>
+        </methods>
+      </class> <!-- com.qa.demo.tests.FBTest -->
+      <class name="com.qa.demo.tests.YahooTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.qa.demo.tests.YahooTest -->
+    </classes>
+  </test> <!-- Test3(failed) -->
+  <test name="Test2(failed)" parallel="tests">
+    <classes>
+      <class name="com.qa.demo.tests.GoogleTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.qa.demo.tests.GoogleTest -->
+      <class name="com.qa.demo.tests.FBTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="cleanLogFolder"/>
+          <include name="mergeLogs"/>
+        </methods>
+      </class> <!-- com.qa.demo.tests.FBTest -->
+      <class name="com.qa.demo.tests.YahooTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="YahooTest"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.qa.demo.tests.YahooTest -->
+    </classes>
+  </test> <!-- Test2(failed) -->
+</suite> <!-- Failed suite [Suite] -->
